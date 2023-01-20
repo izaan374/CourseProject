@@ -5,7 +5,7 @@ pipeline {
             steps {
                //bat "rmdir  /s /q CourseProject"
                 //bat "git clone https://github.com/izaan374/CourseProject.git"
-                bat "mvn clean -f CourseProject"
+                bat "mvn clean install -f CourseProject"
             }
         }
         stage('install') {
