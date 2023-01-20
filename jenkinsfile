@@ -10,7 +10,6 @@ pipeline {
         stage('Good') {
             steps{
                 echo'Good Night'
-                snykSecurity snykInstallation: 'snykk', snykTokenId: 'snyk@latest'
                }
         }       
     }
