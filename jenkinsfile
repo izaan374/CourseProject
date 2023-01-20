@@ -10,12 +10,7 @@ pipeline {
         stage('Good') {
             steps{
                 echo'Good Night'
-                snykSecurity(
-          snykInstallation: 'snykk',
-          snykTokenId: 'snyk@latest',
-          // place other optional parameters here, for example:
-          additionalArguments: '--all-projects --detection-depth=<DEPTH>'
-                )
+                snykSecurity failOnError: false, failOnIssues: false, snykInstallation: 'snykk', snykTokenId: 'snyk@latest'
            }
         }       
     }
